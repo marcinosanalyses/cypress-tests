@@ -24,10 +24,15 @@ export class homePage {
         })
 
     }
-    clickToapplySiteLanguage() {
+    clickToapplySiteLanguage(language) {
+        cy.intercept('http://www.verama.com/_hcms/perf').as('loadingPage');
         cy.get('#language').should('be.visible').within(() => {
         cy.get('.dropdown-toggle').should('have.length.above',1)
-        cy.contains('Apply',{matchCase:false}).click()
+        cy.get('.dropdown-toggle').first().click()
+        cy.contains('a',language,{matchCase:false}).click()
+        cy.get('.dropdown-toggle').first().should('have.text',language)
+        cy.contains('Apply',{matchCase:false})
+        // cy.wait('@loadingPage')
         return this;
         })
     }

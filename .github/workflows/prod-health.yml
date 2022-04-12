@@ -22,11 +22,11 @@ jobs:
           command: npm run cy:chrome:ci
           browser: chrome
           record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       - name: preview screenhots when failed
         uses: actions/upload-artifact@v2-preview
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots/*
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
