@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "cypress": "^9.5.3"
+  },
+  "scripts": {
+    "start": "cypress open",
+    "cy:chrome:run": "cypress run --browser chrome --headless",
+    "cy:chrome:ci": "cypress run --headless --browser chrome"
+
+  }
+}

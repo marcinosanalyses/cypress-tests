@@ -1,0 +1,14 @@
+{
+    "baseUrl": "https://www.verama.com/en",
+    "projectId": "q3uesb",
+    "video": false,
+    "videoCompression":8,
+    "videoUploadOnPasses": false,
+    "chromeWebSecurity": false,
+    "defaultCommandTimeout": 40000,
+    "pageLoadTimeout": 60000,
+    "requestTimeout": 40000,
+    "responseTimeout": 40000,
+    "viewportHeight": 720,
+    "viewportWidth": 1280
+}
