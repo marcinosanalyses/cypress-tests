@@ -1,7 +1,8 @@
-name: Cypress Tests
+name: Production Suite
 
 on:
-  push:
+  schedule:
+    - cron: '0 6 * * *'
 
   workflow_dispatch:
 
@@ -19,7 +20,8 @@ jobs:
         with:
           build: npm install
           command: npm run cy:chrome:ci
-          group: 'UI - Chrome'
+          browser: chrome
+          record: true
       - name: preview screenhots when failed
         uses: actions/upload-artifact@v2-preview
         if: failure()

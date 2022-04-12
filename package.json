@@ -5,7 +5,8 @@
   "scripts": {
     "start": "cypress open",
     "cy:chrome:run": "cypress run --browser chrome --headless",
-    "cy:chrome:ci": "cypress run --headless --browser chrome"
+    "cy:chrome:ci": "cypress run --headless --browser chrome",
+    "cy:chrome:ci:rec": "cypress run --headless --browser chrome --tag 'production chck'"
 
   }
 }
