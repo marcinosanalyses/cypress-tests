@@ -6,6 +6,6 @@
     "start": "cypress open",
     "cy:chrome:run": "npx cypress run --headless --browser chrome",
     "cy:chrome:ci": "npx cypress run --headless --browser chrome",
-    "cy:chrome:ci:rec": "cypress run --headless --browser chrome --tag 'production chck'"
+    "cy:chrome:ci:rec": "cypress run --record --headless --browser chrome --tag 'production chck'"
   }
 }
