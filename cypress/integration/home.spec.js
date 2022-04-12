@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 import { home } from '../support/pages/home'
+import { register } from '../support/pages/register'
 // const home = new home
 
 describe("Homepage tests", () => {
@@ -10,20 +11,21 @@ describe("Homepage tests", () => {
     })
     context("Basic checks", () => {
 
-      it("Check if Cookies Policy link exists", function () { 
+      it("Check if Cookies Policy link exists", () => {
         home.checkCookiesPolicyLink()
       });
-      it("Accept Cookies Policy", function () { 
+      it("Accept Cookies Policy", () => {
         home.acceptCookiesPolicy()
       });
-      it("Check if Create account button is visible in top menu and links to register form", function () { 
-        cy.get('#site-header').within(() => {
-          cy.contains('a','Create account',{matchCase:false}).click()
-        })
-     
+      it("Check if Create account button is visible in top menu and links to register form", () => {
+        register.getRegisterForm()
       });
-      it.skip("Check if Create account button is visible in home content", function () { 
+      it.skip("Check if Create account button is visible in home content", () => {
         //TO DO
+      });
+      it("Update location to Global and languahe to English on top language menu", () => {
+        const language = 'English'
+        home.clickToapplySiteLanguage(language)
       });
     });
 });

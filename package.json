@@ -1,12 +1,11 @@
 {
   "devDependencies": {
-    "cypress": "^9.5.3"
+    "cypress": "^9.4.0"
   },
   "scripts": {
     "start": "cypress open",
-    "cy:chrome:run": "cypress run --browser chrome --headless",
-    "cy:chrome:ci": "cypress run --headless --browser chrome",
+    "cy:chrome:run": "npx cypress run --headless --browser chrome",
+    "cy:chrome:ci": "npx cypress run --headless --browser chrome",
     "cy:chrome:ci:rec": "cypress run --headless --browser chrome --tag 'production chck'"
-
   }
 }

@@ -5,10 +5,10 @@
     "videoCompression":8,
     "videoUploadOnPasses": false,
     "chromeWebSecurity": false,
-    "defaultCommandTimeout": 40000,
-    "pageLoadTimeout": 60000,
-    "requestTimeout": 40000,
-    "responseTimeout": 40000,
+    "defaultCommandTimeout": 80000,
+    "pageLoadTimeout": 120000,
+    "requestTimeout": 80000,
+    "responseTimeout": 80000,
     "viewportHeight": 720,
     "viewportWidth": 1280
 }
