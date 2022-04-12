@@ -1,4 +1,6 @@
 {
+    "baseUrl": "https://www.verama.com/en",
+    "projectId": "q3uesb",
     "video": false,
     "videoCompression":8,
     "videoUploadOnPasses": false,

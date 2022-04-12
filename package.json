@@ -5,7 +5,7 @@
   "scripts": {
     "start": "cypress open",
     "cy:chrome:run": "cypress run --browser chrome --headless",
-    "cy:run:chrome:ci": "cypress run --headless --browser chrome"
+    "cy:chrome:ci": "cypress run --headless --browser chrome"
 
   }
 }
