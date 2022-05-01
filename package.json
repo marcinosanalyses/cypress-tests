@@ -6,6 +6,7 @@
     "start": "cypress open",
     "cy:chrome:run": "npx cypress run --headless --browser chrome",
     "cy:chrome:ci": "npx cypress run --headless --browser chrome",
+    "cy:chrome:ci:dev:rec": "cypress run --browser chrome --record --key 67d8e3cc-e5cc-481c-8b89-823775e3b2ca --tag 'develop chck'",
     "cy:chrome:ci:rec": "cypress run --record --headless --browser chrome --tag 'production chck'"
   }
 }
