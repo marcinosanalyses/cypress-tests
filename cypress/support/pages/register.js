@@ -3,15 +3,12 @@ const topMenu ='.-flex-direction-column > .nav-item__container'
 
 export class registerPage {
 
-    getRegisterForm() {
-        cy.get('#site-header').within(() => {
-            cy.contains('a','Create account',{matchCase:false}).click()
-        })
-        cy.wait(2000)
-        cy.get('[role="dialog"]')
-   
+    checkRegisterForm() {
+
+
+        cy.get('input').should('have.length.at.least',5)   
         cy.contains('privacy policy',{matchCase:false})
-        cy.get('[type="submit"]').should('be.visible')  
+        cy.get('[type="submit"]').should('be.visible') 
         return this;
     }
 }
