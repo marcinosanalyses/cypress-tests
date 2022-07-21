@@ -10,5 +10,8 @@
     "requestTimeout": 80000,
     "responseTimeout": 80000,
     "viewportHeight": 720,
-    "viewportWidth": 1280
+    "viewportWidth": 1280,
+    "env": {
+        "appUrl": "https://app.verama.com"
+    }
 }
