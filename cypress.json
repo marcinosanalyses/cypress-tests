@@ -12,6 +12,10 @@
     "viewportHeight": 720,
     "viewportWidth": 1280,
     "env": {
-        "appUrl": "https://app.verama.com"
+        "appUrl": "https://app.verama.com",
+        "fistName": "Jane",
+        "lastName": "Testova",
+        "email": "marcinosanalyses+jane@gmail.com",
+        "pass": "tEstovavErama2022!!"
     }
 }
