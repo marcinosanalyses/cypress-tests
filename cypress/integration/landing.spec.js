@@ -4,7 +4,7 @@ import { home } from '../support/pages/home'
 import { register } from '../support/pages/register'
 // const home = new home
 
-describe("Homepage tests", () => {
+describe("Landing page tests", () => {
     beforeEach(() => {
       cy.visit('/')
 

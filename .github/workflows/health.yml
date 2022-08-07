@@ -18,7 +18,7 @@ jobs:
         uses: cypress-io/github-action@v2.8.2
         with:
           build: npm install
-          command: npm run cy:chrome:ci
+          command: npm run cy:chrome:run
           group: 'UI - Chrome'
       - name: preview screenhots when failed
         uses: actions/upload-artifact@v2-preview
