@@ -16,13 +16,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Set Suite Type
+        run: node setSuiteType.js devSmoke
+
       - name: Cypress run
         uses: cypress-io/github-action@v2.8.2
         with:
-          build: npm install
-          command: |
-            node setSuiteType.js devSmoke
-            npm run cy:chrome:ci:rec
+          command: npm run cy:chrome:ci:rec
           browser: chrome
           record: true
         env:
