@@ -28,7 +28,6 @@ jobs:
         run: node setSuiteType.js devSmoke
 
       - name: Cypress run
-        id: cypress-run
         uses: cypress-io/github-action@v2.8.2
         with:
           command: npm run cy:chrome:ci:rec
@@ -38,20 +37,20 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
       - name: Merge JSON reports
-        run: node mergeJsonReports.js
         if: always()
+        run: node mergeJsonReports.js
 
       - name: Send merged report to webhook
+        if: always()
         run: >
           curl -X POST -H "Content-Type: multipart/form-data" -F "file=@mochawesome-report/mergedReport.json" https://hook.eu1.make.com/6soj6gh8vvfnqpoji3cnp1b5ap8bysf0
-        if: always()
 
       - name: Store merged report as artifact
+        if: always()
         uses: actions/upload-artifact@v2
         with:
           name: mochawesome-merged-report
           path: mochawesome-report/mergedReport.json
-        if: always()
 
       - name: Preview screenshots when failed
         uses: actions/upload-artifact@v2
@@ -59,19 +58,3 @@ jobs:
         with:
           name: cypress-screenshots
           path: cypress/screenshots/*
-
-    post:
-      if: success() || failure()
-      steps:
-        - name: Merge JSON reports
-          run: node mergeJsonReports.js
-
-        - name: Send merged report to webhook
-          run: >
-            curl -X POST -H "Content-Type: multipart/form-data" -F "file=@mochawesome-report/mergedReport.json" https://hook.eu1.make.com/6soj6gh8vvfnqpoji3cnp1b5ap8bysf0
-
-        - name: Store merged report as artifact
-          uses: actions/upload-artifact@v2
-          with:
-            name: mochawesome-merged-report
-            path: mochawesome-report/mergedReport.json
