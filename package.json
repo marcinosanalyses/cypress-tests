@@ -1,11 +1,12 @@
 {
   "devDependencies": {
-    "cypress": "^8.7.0",
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
     "@cypress/webpack-preprocessor": "^5.12.0",
     "babel-loader": "^8.2.3",
-    "cypress-localstorage-commands": "^1.6.1"
+    "cypress": "^8.7.0",
+    "cypress-localstorage-commands": "^1.6.1",
+    "cypress-mochawesome-reporter": "^3.3.0"
   },
   "scripts": {
     "start": "cypress open",
@@ -15,5 +16,9 @@
     "cy:chrome:ci:dev:rec": "cypress run --browser chrome --record --key 67d8e3cc-e5cc-481c-8b89-823775e3b2ca --tag 'develop chck'",
     "cy:chrome:ci:rec": "cypress run --record --headless --browser chrome --tag 'production chck'",
     "cy:chrome:run:app": "npm run cy:run APPLITOOLS_API_KEY='mysqxyDXYNKeC18YLuC1019B1zIbbjiXvWQhoyUCYBOzw110'"
+  },
+  "dependencies": {
+    "glob": "^7.2.0",
+    "lodash": "^4.17.21"
   }
 }

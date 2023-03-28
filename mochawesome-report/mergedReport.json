@@ -1,0 +1,300 @@
+{
+  "results": [
+    {
+      "uuid": "44060a09-ce35-4ccb-a8f7-b1046347fefc",
+      "title": "",
+      "fullFile": "cypress/integration/landing.spec.js",
+      "file": "cypress/integration/landing.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "70987623-8b34-4392-8a58-8efc156fd28a",
+          "title": "Landing page tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "ea783be3-9c3c-448b-82bd-21214f0d3d84",
+              "title": "Basic checks",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Check if Cookies Policy link exists",
+                  "fullTitle": "Landing page tests Basic checks Check if Cookies Policy link exists",
+                  "timedOut": null,
+                  "duration": 6715,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_home.home.checkCookiesPolicyLink();",
+                  "err": {},
+                  "uuid": "0ddb6ac9-48f6-449e-87b5-1528c7793043",
+                  "parentUUID": "ea783be3-9c3c-448b-82bd-21214f0d3d84",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Accept Cookies Policy",
+                  "fullTitle": "Landing page tests Basic checks Accept Cookies Policy",
+                  "timedOut": null,
+                  "duration": 2950,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_home.home.acceptCookiesPolicy();",
+                  "err": {},
+                  "uuid": "6109715b-54b9-4ebd-8b3e-e60af930c5c9",
+                  "parentUUID": "ea783be3-9c3c-448b-82bd-21214f0d3d84",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Check if Create account button is visible in top menu and links to register form",
+                  "fullTitle": "Landing page tests Basic checks Check if Create account button is visible in top menu and links to register form",
+                  "timedOut": null,
+                  "duration": 10901,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#site-header').within(() => {\n  cy.contains('a', 'Create account', {\n    matchCase: false\n  }).click();\n});\n_register.register.checkRegisterForm();",
+                  "err": {},
+                  "uuid": "71adf0be-7a9e-4485-85a6-f1c13ecf2d27",
+                  "parentUUID": "ea783be3-9c3c-448b-82bd-21214f0d3d84",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Check if Create account button is visible in home content",
+                  "fullTitle": "Landing page tests Basic checks Check if Create account button is visible in home content",
+                  "timedOut": null,
+                  "duration": 8050,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#dnd_area-module-2').contains('Create account', {\n  matchCase: false\n}).click();\n_register.register.checkRegisterForm();",
+                  "err": {},
+                  "uuid": "b502563c-2e5f-4a71-b640-57d37f475d11",
+                  "parentUUID": "ea783be3-9c3c-448b-82bd-21214f0d3d84",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Update location to Global and language to English on top language menu",
+                  "fullTitle": "Landing page tests Basic checks Update location to Global and language to English on top language menu",
+                  "timedOut": null,
+                  "duration": 3821,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const language = 'English';\n_home.home.clickToapplySiteLanguage(language);",
+                  "err": {},
+                  "uuid": "22556d06-a822-4db7-bfe6-bb83d8362e7e",
+                  "parentUUID": "ea783be3-9c3c-448b-82bd-21214f0d3d84",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Find assignment redirects to job add list",
+                  "fullTitle": "Landing page tests Basic checks Find assignment redirects to job add list",
+                  "timedOut": null,
+                  "duration": 3319,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.intercept('GET', '/api/public/job-requests/**').as('getRequestList');\ncy.contains('Find assignment', {\n  matchCase: false\n}).click();\ncy.get('@getRequestList');",
+                  "err": {},
+                  "uuid": "abba591c-dea1-4fe3-af34-4f20837b985f",
+                  "parentUUID": "ea783be3-9c3c-448b-82bd-21214f0d3d84",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "0ddb6ac9-48f6-449e-87b5-1528c7793043",
+                "6109715b-54b9-4ebd-8b3e-e60af930c5c9",
+                "71adf0be-7a9e-4485-85a6-f1c13ecf2d27",
+                "b502563c-2e5f-4a71-b640-57d37f475d11",
+                "22556d06-a822-4db7-bfe6-bb83d8362e7e",
+                "abba591c-dea1-4fe3-af34-4f20837b985f"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 35756,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "246b1e6c-55a1-4022-9100-28ab45619388",
+      "title": "",
+      "fullFile": "cypress/integration/app.spec.js",
+      "file": "cypress/integration/app.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ec55d9e7-4761-4415-ac5f-271ca46c515c",
+          "title": "Web app tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check if basic element are visible",
+              "fullTitle": "Web app tests Check if basic element are visible",
+              "timedOut": null,
+              "duration": 12239,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Search');\ncy.contains('Log in');\ncy.contains('News');\ncy.contains('Contact us');\ncy.contains('Open Jobs');",
+              "err": {},
+              "uuid": "c2a3ed01-e07b-4bdd-a13a-93b733947c23",
+              "parentUUID": "ec55d9e7-4761-4415-ac5f-271ca46c515c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Not logged in user can filter by location and see job request list",
+              "fullTitle": "Web app tests Not logged in user can filter by location and see job request list",
+              "timedOut": null,
+              "duration": 11146,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const locationName = 'Stockholm';\ncy.filterByLocation(locationName);",
+              "err": {},
+              "uuid": "141ce23a-1234-476e-9bff-b1fbc2385276",
+              "parentUUID": "ec55d9e7-4761-4415-ac5f-271ca46c515c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to register an existing user",
+              "fullTitle": "Web app tests Try to register an existing user",
+              "timedOut": null,
+              "duration": 21150,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const firstName = Cypress.env('fistName');\nconst lastName = Cypress.env('lastName');\nconst email = Cypress.env('email');\nconst pass = Cypress.env('pass');\ncy.contains('Create account').click();\ncy.fillInUserRegisterForm(firstName, lastName, email, pass);\ncy.get('[type=\"submit\"]').click();\ncy.contains('This email address is already in use');",
+              "err": {},
+              "uuid": "ac272feb-a560-4f04-bab8-34ff21139323",
+              "parentUUID": "ec55d9e7-4761-4415-ac5f-271ca46c515c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c2a3ed01-e07b-4bdd-a13a-93b733947c23",
+            "141ce23a-1234-476e-9bff-b1fbc2385276",
+            "ac272feb-a560-4f04-bab8-34ff21139323"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 44535,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome-results.json",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "mochawesome-report",
+        "reportFilename": "mochawesome-results.json",
+        "suiteType": "prodSuite"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

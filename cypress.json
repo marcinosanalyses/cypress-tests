@@ -17,5 +17,14 @@
         "lastName": "Testova",
         "email": "marcinosanalyses+jane@gmail.com",
         "pass": "tEstovavErama2022!!"
+    },
+    "reporter": "../reporters/customMochawesomeReporter.js",
+    "reporterOptions": {
+      "overwrite": false,
+      "html": false,
+      "json": true,
+      "reportDir": "mochawesome-report",
+      "reportFilename": "mochawesome-results.json",
+      "suiteType": "prodSuite"
     }
 }

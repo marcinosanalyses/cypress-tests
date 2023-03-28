@@ -2,7 +2,7 @@
 
 describe("Web app tests", () => {
     beforeEach(() => {
-        cy.intercept('GET','/api/public/job-requests/**').as('getRequestList');
+        cy.intercept('GET','app.verama.com/en/job-requests?page=0&size=20**').as('getRequestList');
         cy.visit(Cypress.env('appUrl')+'/en/job-requests')
         cy.get('@getRequestList')
     })
@@ -12,7 +12,10 @@ describe("Web app tests", () => {
         cy.contains('News')
         cy.contains('Contact us')
         cy.contains('Open Jobs')
-
+    });
+    it("Not logged in user can filter by location and see job request list", () => {
+        const locationName = 'Stockholm'
+        cy.filterByLocation(locationName)
 
     });
     it("Try to register an existing user", () => {
