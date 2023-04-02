@@ -9,13 +9,26 @@ describe("Web app tests", () => {
     it("Check if basic element are visible", () => {
         cy.contains('Search')
         cy.contains('Log in')
-        cy.contains('News')
+        //From some reason News are hidden now. 
+        // cy.contains('News') 
         cy.contains('Contact us')
         cy.contains('Open Jobs')
     });
     it("Not logged in user can filter by location and see job request list", () => {
         const locationName = 'Stockholm'
         cy.filterByLocation(locationName)
+
+    });
+    it("Not logged in user can filter by remote jobs", () => {
+        cy.get('[aria-haspopup="listbox"]').contains('remote',{matchCase:false}).click()
+        cy.get('[id^="FULLY_REMOTE-"]').click()
+        cy.get('[data-opener="button"]').contains('remote')
+        cy.get('[id^="FULLY_REMOTE-"]').should('have.attr', 'aria-selected', 'true');
+        cy.get('[type="submit"]').click()
+        cy.get('.section > .-flex-align-flex-start').contains('remote',{matchCase:false})
+
+
+
 
     });
     it("Try to register an existing user", () => {

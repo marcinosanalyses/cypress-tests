@@ -26,7 +26,7 @@ Cypress.Commands.add('filterByLocation', (locationName) => {
   cy.intercept('GET', `api/public/locations/autocomplete?query=${locationName}*`).as('getLocationResults');
   cy.contains('Location').type(locationName, { delay: 100 })
   cy.wait('@getLocationResults')
-  cy.get('#react-select-2-option-0').contains(locationName).should('be.visible').first().click()
+  cy.get('#react-select-3-option-0').contains(locationName).should('be.visible').first().click()
   cy.contains('.filter-input',locationName)
   cy.contains('Search').click()
   cy.contains('Clear')
