@@ -11,9 +11,10 @@
     "responseTimeout": 80000,
     "viewportHeight": 720,
     "viewportWidth": 1280,
+    "testFiles": "**/*.{js,ts}",
     "env": {
         "appUrl": "https://app.verama.com",
-        "fistName": "Jane",
+        "firstName": "Jane",
         "lastName": "Testova",
         "email": "marcinosanalyses+jane@gmail.com",
         "pass": "tEstovavErama2022!!"
