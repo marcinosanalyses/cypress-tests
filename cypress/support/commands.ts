@@ -1,3 +1,4 @@
+import '@bahmutov/cy-api'
 
 
 Cypress.Commands.add('fillInUserRegisterForm', (firstName, lastName, email, pass) => {
@@ -20,7 +21,31 @@ Cypress.Commands.add('fillInUserRegisterForm', (firstName, lastName, email, pass
   })
 
 
-  
+  Cypress.Commands.add('login', (username, password) => {
+    cy.log(username)
+    cy.log(password)
+    cy.api({
+        method: 'POST',
+        url: 'https://app.verama.com/api/auth/login',
+        headers: {
+            'Content-Type': 'multipart/form-data',
+            'X-Session': 'c93ca76d-3bbf-4995-9fa3-325186de8dfb',
+            'X-Frontend-Version': 'd569843e',
+        },
+        body: {
+            username: username,
+            password: password
+        },
+        form: true // this indicates the request body should be form data
+    }).then((response) => {
+        expect(response.status).to.eq(200);
+    });
+    
+});
+
+
+
+
   
   
 

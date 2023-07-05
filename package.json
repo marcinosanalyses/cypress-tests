@@ -2,6 +2,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
+    "@bahmutov/cy-api": "^2.2.5",
     "@cypress/webpack-preprocessor": "^5.17.1",
     "@types/cypress": "^1.1.3",
     "babel-loader": "^8.2.3",

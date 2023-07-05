@@ -17,7 +17,9 @@
         "firstName": "Jane",
         "lastName": "Testova",
         "email": "marcinosanalyses+jane@gmail.com",
-        "pass": "tEstovavErama2022!!"
+        "pass": "tEstovavErama2022!!",
+        "apiUserName": "marcinosanalyses+api@gmail.com",
+        "apiUserPass": "vErama2023!!"
     },
     "reporter": "../reporters/customMochawesomeReporter.js",
     "reporterOptions": {
