@@ -1,5 +1,5 @@
-/// <reference types="../support/index.d.ts" />
-/// <reference types="../../cypress.d.ts" />
+/// <reference types="../../support/index.d.ts" />
+/// <reference types="../../../cypress.d.ts" />
 
 
 describe("Web app tests", () => {

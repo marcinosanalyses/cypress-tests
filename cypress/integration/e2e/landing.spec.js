@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-import { home } from '../support/pages/home'
-import { register } from '../support/pages/register'
+import { home } from '../../support/pages/home'
+import { register } from '../../support/pages/register'
 // const home = new home
 
 describe("Landing page tests", () => {
